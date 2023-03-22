@@ -23,7 +23,7 @@
             <nav class="home-navbar">
                 <ul>
                     <li><a href="index.html"><b>HOME</b></a></li>
-                    <li><a href="../templates/login.html"><b>LOGIN</b></a></li>
+                    <li><a href="{{ url_for('login') }}"><b>LOGIN</b></a></li>
                     <li><a href="../templates/contact.html"><b>CONTACT US</b></a></li>
                     <li><a href="../templates/about.html"><b>ABOUT US</b></a></li>                   
                 </ul>
@@ -34,7 +34,7 @@
                
                <h1>Welcome to PREVIEW  </h1>
                <h2>A Fast ,Easy ,Trustworthy and Reliable printer service platform</h2>
-                <a class="button" id="btn-start" href="create-account.html" onClick="displayParcel()">Get Started Now</a>
+                <a class="button" id="btn-start" href="{{ url_for('create') }}" onClick="displayParcel()">Get Started Now</a>
             </div>
         </header>
 

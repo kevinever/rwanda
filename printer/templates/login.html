@@ -5,25 +5,25 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="Courier service,Parcel delivery order,Parcel delivery,RDTECH ">
-        <meta name="author" content="Daniel Nziranziza">
+        <meta name="keywords" content="Courier service,Parcel delivery order,Parcel delivery,Preview solutions ">    
+         <meta name="author" content=" Kevin Nyayiha">
         <meta name="description" content="A fast and reliable courier service">
-        <title>RDTECH - a fast and reliable courier service</title>
-        <link href="../css/index.css" rel="stylesheet" >
-        <link rel="shortcut icon" type="image/png" href="../img/send.png"/>
+        <title>Preview solutions - fast and reliable courier service</title>
+        <link href="../static/css/index.css" rel="stylesheet" >
+        <link rel="shortcut icon" type="image/png" href="../static/img/send.png"/>
     </head>
     <body>
 <!--The header of the page-->
         <header>
             <div class="container">
                 <div id="brand">
-                    <a href="../index.html"><img src="../img/RD.PNG" alt="Slogo" id="logo"><label class="top-label">RDTECH </label></a>
+                    <a href="{{ url_for('index')}}"><img src="../static/img/.PNG" alt="Slogo" id="logo"><label class="top-label">Preview solutions </label>></a>
                 </div>
                 <nav>
                     <ul>
-                            <li><a href="../index.html"><b>HOME</b></a></li>
-                            <li><a href="login.html"><b>LOGIN</b></a></li>
-                            <li><a href="contact.html"><b>CONTACT US</b></a></li>
+                            <li><a href="{{ url_for('index')}}"><b>HOME</b></a></li>
+                            <li><a href="{{ url_for('login')}}"><b>LOGIN</b></a></li>
+                            <li><a href="{{ url_for('createus')}}"><b>CONTACT US</b></a></li>
                             <li><a href="about.html"><b>ABOUT US</b></a></li>   
                     </ul>
                 </nav>
@@ -33,9 +33,9 @@
       <div class="form">
         <form onSubmit="return false">
             <div>
-                <img src="../img/RD.PNG" class="icon img-center"/> 
+                <img src="../static/img/.PNG" class="icon img-center"/> 
                 <div class="to-center">
-                    <label id="login-title">Sign in to RDTECH </label>
+                    <label id="login-title">Sign in to Preview solutions </label>>
                 </div>
             </div>
             <div class="box">
@@ -50,7 +50,7 @@
 
             </div>
             <div class="to-center box">
-                <a href="create-account.html">Create an account</a>
+                <a href="{{ url_for('create') }}">Create an account</a>
             </div>
         </form>
       </div>
@@ -58,8 +58,8 @@
         <footer class="fixed-footer">
              <div class="container">
                  <hr/>
-                 <p>&copy RDTECH  2018. <a href="#" id="footer-link">Terms</a><a href="#">Privacy</a></p>
-                 <script src="../js/login.js"></script>
+                 <p>&copy Preview solutions  2023. <a href="#" id="footer-link">Terms</a><a href="#">Privacy</a></p>
+                 <script src="../static/js/login.js"></script>
              </div>
         </footer>
    
