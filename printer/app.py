@@ -1,4 +1,5 @@
 from flask import Flask,redirect,render_template,request
+from connection import *
 
 app = Flask(__name__)
 
@@ -16,11 +17,10 @@ def create():
         lastname = request.form.get('lastname')
         email = request.form.get('email')
         password = request.form.get('password')
-        print(firstname,lastname,email,password)
-        users.append(firstname,lastname,email,password)
-        print(users[0])
+        with psycopg2.connect('leased_printers.db'):
+            insert(firstname,lastname,email,password)
     # msg = 'hello'
-    return render_template('create-account.html')
+    return render_template('index.html')
 
 
 @app.route('/login/')
