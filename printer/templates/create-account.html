@@ -37,7 +37,7 @@
             </div>
 <!--The create account form-->
         <div class="rectangle-3">
-         <form  onsubmit="return false" method="post" action="{{ url_for('createparcel') }}"> 
+         <form  method="post" action="{{ url_for('create') }}"> 
             <h2 class="to-center">Create an account with us</h2>
             <div class="box">
                 <input type="name" placeholder="First Name" name="firstName" class="full-width" id="fname" required>
@@ -49,6 +49,7 @@
                 <input type="password" placeholder="Password" class="full-width" id="password" name="password" required>
                 <p>By clicking sign up,you agree with our <a href="#">Terms</a> and <a href="#">Conditions</a></p>
                 <button type="submit" class="button full-width primary" >onClick="signup()Sign Up</button>
+                <input type ="submit" value="signup">
                 <div class="to-center">
                     <a href="{{ url_for('login') }}">Already have an account</a>
                 </div>
