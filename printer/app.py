@@ -70,6 +70,16 @@ def admin():
 
 @app.route('/createparcel/',methods=('POST','GET'))
 def createparcel():
+    if request.method == 'POST':
+        instutition = request.form['instutition']
+        location = request.form['location']
+        serialnumber = request.form['serialnumber']
+        model = request.form['model']
+        types = request.form['type']
+        ip = request.form['ip']
+        with psycopg2.connect("dbname='leased_printers' user='postgres' password='post123' host='localhost' port='5432' ") as conn:
+            insert_printer(instutition,location,serialnumber,model,types,ip)
+            return render_template('index.html')
     return render_template('createparcel.html')
 
 
