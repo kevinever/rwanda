@@ -5,12 +5,12 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="Courier service,Parcel delivery order,Parcel delivery,RDTECH ">
-        <meta name="author" content="RDTECH">
+        <meta name="keywords" content="Courier service,Parcel delivery order,Parcel delivery,Preview solutions ">
+        <meta name="author" content="Preview solutions">
         <meta name="description" content="A fast and reliable courier service">
-        <title>RDTECH - a fast and reliable courier service</title>
-        <link href="../css/index.css" rel="stylesheet">
-        <link href="../css/popup.css" rel="stylesheet" type="text/css">
+        <title>Preview solutions - a fast and reliable courier service</title>
+        <link href="../static/css/index.css" rel="stylesheet">
+        <link href="../static/css/popup.css" rel="stylesheet" type="text/css">
         <link rel="shortcut icon" type="image/png" href="../img/send.png"/>
     </head>
     <body onLoad="fetchParcel()">
@@ -18,7 +18,7 @@
             <header>
                     <div class="container">
                             <div id="brand">
-                                <a href="../index.html"><img src="../img/RD.PNG" alt="Slogo" id="logo"><label class="top-label">RDTECH </label></a>
+                                <a href="../index.html"><img src="../img/RD.PNG" alt="Slogo" id="logo"><label class="top-label">Preview solutions </label></a>
                             </div>
                         <nav>
                             <ul>
@@ -34,13 +34,13 @@
         <div class="container">
 <!--User Dashboard header-->
             <div class="box" id="user-header">
-                <label class="top-label">Create Parcel Delivery Order With RDTECH </label>
+                <label class="top-label">Create Printer Delivery Order With Preview solutions </label>
               <div id="user-btn">
-                <a class="button current" href="createparcel.html" id="link1">Create Parcel DOs</a>
-                <a class="button primary" href="#" onClick="viewDeliveredPOs()" id="link2">Delivered Parcel</a>
-                <a class="button primary" href="#" onClick="viewInTransitPDOs()" id="link3">In Transit Parcel DOs</a>
-                <a class="button primary" href="#" onClick="viewAllPDOs()" id="link4">All my Parcel DOs</a>
-                <a class="button primary" href="track.html" id="link5" onClick="trackParcel()">Track my Parcel</a>
+                <a class="button current" href="createparcel.html" id="link1">Create Printer DOs</a>
+                <a class="button primary" href="#" onClick="viewDeliveredPOs()" id="link2">Delivered Printer</a>
+                <a class="button primary" href="#" onClick="viewInTransitPDOs()" id="link3">In Transit Printer DOs</a>
+                <a class="button primary" href="#" onClick="viewAllPDOs()" id="link4">All my Printer DOs</a>
+                <a class="button primary" href="track.html" id="link5" onClick="trackParcel()">Track my Printer</a>
               </div>
             </div>
 
@@ -48,21 +48,32 @@
         <section id="user-content">
           <div class="block">
             <div class="form-3">
-                <form class="box" onSubmit="return false">
-                    <label>Please indicate where your parcel is loacted</label>
+                <!-- <form class="box" onSubmit="return false"> -->
+                    <form method="post">
+                    <label>Please indicate the instutition for your Printer</label>
                     <br />
-                    <input type="text" placeholder="From" class="full-width" id="from" required><br />
-                    <label>Please tell us where you would like your parcel to be delivered</label>
+                    <input type="text" placeholder="instutition" class="full-width" id="from" name="instutition" required><br />
+                    <label>Please tell us where you would like your Printer to be located</label>
                     <br />
-                    <input type="text" placeholder="Destination" class="full-width" id="destination" required><br />
-                    <label>How heavy is your box</label>
+                    <input type="text" placeholder="location"  name ="location" class="full-width" id="destination" required><br />
+                    <label>Please tell us the serial number of your Printer to be delivered</label>
                     <br />
-                    <input type="number" class="full-width" id="weight"><br />
+                    <input type="text" placeholder="serial number" name="serialnumber" class="full-width" id="destination" required><br />
+                    
+                    <label>Please tell us your printer's model to be delivered</label>
+                    <br />
+                    <input type="text" placeholder="model" name="model" class="full-width" id="destination" required><br />
+                    <label>please tell us the type of your printer</label>
+                    <br />
+                    <input type="text" placeholder="type" name="type" class="full-width" id="destination" required><br />
+                    
+                    <label>please privide your printer's ip address </label>
+                    <input type="number" class="full-width" id="weight" placeholder="10.10.20.123"><br />
                     <button type="submit" class="button primary" onClick="createParcel()">Create order</button>
                 </form>        
             </div>
             <div  class="form-3">
-                <h2 class="margin-left to-center">Recent Parcel delivery Order</h2>
+                <h2 class="margin-left to-center">Recent Printer delivery Order</h2>
                 <div id="display">
                 </div>
             </div>
@@ -72,8 +83,8 @@
           </div>
         </section>
         <footer>
-           <hr />
-           <p>&copy RDTECH  2018. <a href="#" style="padding-right:10px">Terms</a><a href="#">Privacy</a></p>
+           <hr/>
+           <p>&copy Preview solutions  2023. <a href="#" style="padding-right:10px">Terms</a><a href="#">Privacy</a></p>
            <script type="text/javascript" src="../js/popup.js"></script>
           
            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPNdvlLuUOv_1D7BYueHC02dTs2J5qjTo&callback=initMap">
