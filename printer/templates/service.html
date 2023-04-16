@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Service Record Form</title>
+    <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="Courier service,Parcel delivery order,Parcel delivery,Preview solutions ">    
+         <meta name="author" content=" Kevin Nyayiha">
+        <meta name="description" content="A fast and reliable courier service">
+        <title>Preview solutions - fast and reliable courier service</title>
+        <link href="../static/css/service.css" rel="stylesheet" >
+        <link href="../static/css/index.css" rel="stylesheet" >
+        <link rel="shortcut icon" type="image/png" href="../static/img/send.png"/>
+  </head>
+
+  <body>
+    <!--Header of the page-->
+    <header>
+      <div class="container">
+              <div id="brand">
+                  <a href="../index.html"><img src="../img/RD.PNG" alt="Slogo" id="logo"><label class="top-label">Preview solutions </label></a>
+              </div>
+          <nav>
+              <ul>
+                  <li><a href="../index.html"><b>HOME</b></a></li>
+                  <li><a href="{{url_for('logout')}}"><b>LOGOUT</b></a></li>
+                  <li><a href="contact.html"><b>CONTACT US</b></a></li>
+                  <li><a href="about.html"><b>ABOUT US</b></a></li>
+              </ul>
+          </nav>
+      </div>
+</header>
+
+    <h1>Service Record Form</h1>
+    <div class="container"></div>
+    <section class="replace">
+    <h2>Replace Section</h2>
+    <form>
+      <label for="spare-serial-number">Spare Serial Number:</label>
+      <input type="text" id="spare-serial-number" name="spare-serial-number"><br>
+      
+      <label for="spare-name-type">Spare Name/Type:</label>
+      <input type="text" id="spare-name-type" name="spare-name-type"><br>
+      
+      <label for="printer-type">Printer Type:</label>
+      <input type="text" id="printer-type" name="printer-type"><br>
+      
+      <label for="technician-name">Technician Name:</label>
+      <input type="text" id="technician-name" name="technician-name"><br>
+      
+      <label for="replacement-date">Date of Replacement:</label>
+      <input type="date" id="replacement-date" name="replacement-date"><br>
+      
+      <label for="replacement-comment">Comment:</label>
+      <textarea id="replacement-comment" name="replacement-comment"></textarea><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  
+  <section class="repair">
+    <h2>Repair Section</h2>
+    <form>
+      <label for="repair-type">Repair Type:</label>
+      <select id="repair-type" name="repair-type">
+        <option value="repair">Repair</option>
+        <option value="replace">Replace</option>
+      </select><br>
+      
+      <label for="repair-date">Repair Date:</label>
+      <input type="date" id="repair-date" name="repair-date"><br>
+      
+      <label for="repair-comment">Comment:</label>
+      <textarea id="repair-comment" name="repair-comment"></textarea><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  
+  <section class="toner">
+    <h2>Toner Section</h2>
+    <form>
+      <label for="toner-type">Toner Type:</label>
+      <input type="text" id="toner-type" name="toner-type"><br>
+      
+      <label for="previous-counter">Previous Counter:</label>
+      <input type="number" id="previous-counter" name="previous-counter"><br>
+      
+      <label for="current-counter">Current Counter:</label>
+      <input type="number" id="current-counter" name="current-counter"><br>
+      
+      <label for="toner-printer">Corresponding Printer:</label>
+      <input type="text" id="toner-printer" name="toner-printer"><br>
+      
+      <label for="toner-change-date">Changed Date:</label>
+      <input type="date" id="toner-change-date" name="toner-change-date"><br>
+      
+      <label for="toner-technician">Technician:</label>
+      <input type="text" id="toner-technician" name="toner-technician"><br>
+      
+      <label for="toner-comment">Comment:</label>
+      <textarea id="toner-comment" name="toner-comment"></textarea><br>
+      
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+</div>
+  </body>
+</html>
